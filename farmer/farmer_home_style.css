@@ -1,0 +1,74 @@
+/* Reset some default styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  body{
+  background-image: url(../images/backgroundPortal.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  .sections {
+    display: none;
+  }
+  .sections:target {
+    display: block;
+  }
+
+  
+  body 
+  /* Style header */
+  .header {
+    background-color: #92b372; /* Green background */
+    color: white; /* White text */
+    padding: 20px;
+
+  }
+
+  span{
+    color: red;
+  }
+/* 
+  .nav {
+    background-color: rgb(86, 92, 86);
+    display: flex;
+    justify-content: center; /* Center align the navigation bar */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+/* } */
+  .nav{
+    background-color: rgb(86, 92, 86);
+    /* position: relative; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+    /* margin-left: 200px; */
+    /* margin-right: 75px; */
+  }
+   */
+  .logo {
+    height: 250px;
+    float: left; /*Align logo to the left*/
+    margin-right: 20px; /*Add some spacing between logo and title*/
+  }
+ 
+  
+  /* Style navigation bar */
+  .navbar ul {
+   
+    list-style-type: none; /* Remove bullet points */
+  }
+  
+  .navbar li {
+    
+    display: inline-block; /* Display navigation items horizontally */
+    margin-right: 200px; /* Add spacing between navigation items */
+  }
+

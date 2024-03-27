@@ -1,0 +1,72 @@
+/* Reset some default styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  body{
+  background-image: url(../images/backgroundPortal.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  .sections {
+    display: none;
+  }
+  .sections:target {
+    display: block;
+  }
+
+  
+  body 
+  /* Style header */
+  .header {
+    background-color: #92b372; /* Green background */
+    color: white; /* White text */
+    padding: 20px;
+
+  }
+
+  .nav{
+    background-color: rgb(86, 92, 86);
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 75px;
+  }
+  
+  .logo {
+    height: 250px;
+    float: left; /* Align logo to the left */
+    margin-right: 20px; /* Add some spacing between logo and title */
+  }
+  
+  /* Style navigation bar */
+  .navbar ul {
+    list-style-type: none; /* Remove bullet points */
+  }
+  
+  .navbar li {
+    display: inline-block; /* Display navigation items horizontally */
+    margin-right: 20px; /* Add spacing between navigation items */
+  }
+  
+  /* Style complaint form */
+  /* .complaint-form {
+    margin-top: 20px;
+  }
+  
+  .complaint-form label,
+  .complaint-form textarea,
+  .complaint-form button {
+    display: block;
+    margin-bottom: 10px;
+  } */
+  
+  /* Style image (if applicable) */
+  /* .main-content img {
+    max-width: 100%;
+    height: auto;
+  } */

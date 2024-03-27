@@ -1,0 +1,284 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: burlywood;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    }
+
+    #nav>h1{
+        font-size: 45px;
+        font-weight: 100;
+        
+        
+    }
+    #nav>h1>span{
+        color: red;
+    }
+    #nav #part2{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        padding: 0 50px;
+        
+    
+    }
+    #nav #part2 a{
+        text-decoration: none;
+        font-size: 25px;
+        color: #222;
+        margin: 20px;
+        position: relative;
+    }
+    #nav #part2 a:hover{
+        border-bottom:2px  solid red;
+        transition: left 0.1s ease;
+        left: 0;
+        
+    
+    }
+    #nav #part2 a:nth-last-child(1){
+        
+        padding: 7px 18px;
+        border-radius: 50px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #000;
+        
+    }
+    #nav #part2 a:nth-last-child(1) #green{
+        width: 100%;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        transition: left 0.4s ease;
+    }
+    #nav #part2 a:nth-last-child(1) h5{
+        font-weight: 100;
+        position: relative;
+        z-index: 99;
+        
+    }
+    #nav #part2 a:nth-last-child(1):hover #green{
+        left: 0;
+    }
+    #main >img{
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #main >h1{
+        position: absolute;
+        color: #000;
+        z-index: 95;
+        font-size: 5.4vw;
+        width: 60%;
+        text-align: center;
+        position: relative;
+        z-index: 98;
+        font-weight: 100;
+        text-transform: capitalize;
+    }
+
+    /* AboutUs*/
+    #AboutUs{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: goldenrod;
+    }
+    #AboutUs>h2>span{
+        color: red;
+        font-size: 100px;
+        
+    }
+    #AboutUs>h2{
+        color: white;
+        position: absolute;
+        top: 15%;
+        display: block;
+        font-size: 1.2em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    #AboutUs>p{
+        color: white;
+        font-size: xx-large;
+        margin-top: 3%;
+        margin-left: 2%;
+        padding: 20%;
+        font-weight: 400;
+    }
+    #AboutUs>h3{
+        color: white;
+        position: absolute;
+        margin-top: 15%;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    #AboutUs>button{
+        position: absolute;
+        border: white;
+        border-radius: 15px;
+        position: absolute;
+        margin-top: 18%;
+        padding: 6px;
+        font-weight: 500;
+        font-size: large;
+    }
+    /* Contact Us */
+    #contactUs{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: beige;
+    }
+    .container {
+        height: 70%;
+        width: 100%;        
+        max-width: 500px;
+        margin:  0 0 25 25;
+    justify-content: center;
+    align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    /* login */
+    /* .container {
+        display: flex; Use flexbox to arrange children
+    }
+    .child{
+        flex: 1;
+        padding: 30px 14% 70px;
+        display: grid;
+        grid-template-columns: ;
+        gap: 2rem;
+        justify-content: space-between;
+
+        border: 1px solid black;
+
+        
+        
+    }
+  
+    .child>img{
+       height: 200px;
+       width: 200px;
+    } */
+    #Login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        /* width: 100px; */
+        background-color: beige;
+    }
+    
+    .child {
+        flex: 1;
+        height: 100px;
+        border: 1px solid #333;
+        margin: 0 10px; /* Add margin to create space between divs */
+        height: 75%;
+        padding: 20px  5% 50px;
+        border-radius: 15px;
+        background-color: yellowgreen;
+    }
+    .child>img{
+        height: 200px;
+        width: 200px;
+        margin-left: 20%;
+        margin-top: 15%;
+    }
+    .child>a{
+        padding: 10px 20px; /* Adjust the padding values as needed */
+        text-decoration: none; /* Remove underlines for better visual appearance */
+        background-color: red; /* Add background color for styling */
+        color: #fff; /* Text color */
+        position: absolute;
+        border-radius: 5px; /* Rounded corners for a button-like appearance */
+        margin: 100px ;
+        margin-top: 70px;
+    }
+    
