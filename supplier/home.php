@@ -9,7 +9,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <head>
 	<title>HOME</title>
 	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-  <link rel="stylesheet" href="admin_home.css">
+  <link rel="stylesheet" href="supplier_home.css">
 </head>
 <body>
 
@@ -60,7 +60,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           role="tab"
           aria-selected="true"
         >
-          View Complaint
+          Post Advertisement
+
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -73,7 +74,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           role="tab"
           aria-selected="false"
         >
-          Farmig Tips
+          Crop Received
         </button>
       </li>
       <li class="nav-item" role="presentation">

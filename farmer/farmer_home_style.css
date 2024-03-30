@@ -72,3 +72,10 @@ body, ul {
     margin-right: 200px; /* Add spacing between navigation items */
   }
 
+/* //farming tips*/
+.tip {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }

@@ -99,13 +99,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="tab-pane fade" id="Farming-Tips" role="tabpanel">
           <!-- Content for the tips tab goes here -->
 
-          <form action="/store-tip" method="post">
-            <label for="tip">Tip:</label><br />
-            <input type="text" id="tip" name="tip" required /><br /><br />
+          <h1>Farming Tips</h1>
+          
+          <div id="farming-tips-container"></div>
 
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+
+            <!-- Tips will be displayed here -->
+          
+          </div>
 
         <div class="tab-pane fade" id="advertisement" role="tabpane2">
           <!-- Content for the Home tab goes here -->
@@ -125,6 +126,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     // Perform logout action
     window.location.href = "../../index.php"; // Redirect to logout script
   }
+    fetch('farmer_tips/view_messages.php') // Change to the correct URL of your PHP file
+    .then(response => response.json())
+    .then(tips => {
+        const farmingTipsContainer = document.getElementById('farming-tips-container');
+        farmingTipsContainer.innerHTML = ''; // Clear existing content
+
+        tips.forEach(tip => {
+            const tipElement = document.createElement('div');
+            tipElement.textContent = tip;
+            farmingTipsContainer.appendChild(tipElement);
+        });
+    })
+    .catch(error => console.error('Error fetching farming tips:', error));
+
 </script>
 </body>
 </html>
