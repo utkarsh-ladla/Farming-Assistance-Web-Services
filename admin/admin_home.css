@@ -70,3 +70,78 @@ body, ul {
     max-width: 100%;
     height: auto;
   } */
+
+  #complaints {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    margin-top: 20px;
+}
+
+#complaints h1 {
+    font-size: 28px; /* Increased font size */
+    color: #333;
+    margin-bottom: 20px;
+}
+.complaint-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.complaint-box p {
+  margin: 0;
+}
+
+.complaint-box select {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.complaint-box select:focus {
+  outline: none;
+}
+
+.complaint-box option {
+  padding: 5px;
+}
+
+/* Style for Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for Form Labels */
+.form-container label {
+  font-weight: bold;
+}
+
+/* Style for Text Input */
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for Submit Button */
+.form-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for Submit Button on Hover */
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}

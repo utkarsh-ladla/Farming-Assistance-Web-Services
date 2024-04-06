@@ -2,7 +2,7 @@
 session_start();
 
 // Include database connection file
-include('db_conn.php');
+include('../db_conn.php');
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

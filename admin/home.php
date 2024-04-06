@@ -39,7 +39,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         --bs-nav-pills-link-active-bg: var(--bs-white);
       ">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-selected="true">
+          <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" data-bs-target="#complaints" type="button" role="tab" aria-selected="true">
             View Complaint
           </button>
         </li>
@@ -62,17 +62,24 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
       <div class="container">
         <div class="tab-content">
-          <div class="tab-pane fade show active" id="home" role="tabpanel">
+          <div class="tab-pane fade show active" id="complaints" role="tabpanel">
             <!-- Content for the Home tab goes here -->
             <h1>Complaint Details</h1>
+            <?php
+            // Include view_messages.php to fetch farming tips
+            include('view_complaints/view_complaints.php');
+            ?>
+           
+
+
 
           </div>
           <div class="tab-pane fade" id="Farming-Tips" role="tabpanel">
             <!-- Content for the tips tab goes here -->
             <form action="farmin_Tips/submit_message.php" method="post">
-            <label for="tip_content">Tip:</label><br />
-            <input type="text" id="tip_content" name="tip_content" required /><br /><br />
-            <input type="submit" value="Submit" />
+              <label for="tip_content">Tip:</label><br />
+              <input type="text" id="tip_content" name="tip_content" required /><br /><br />
+              <input type="submit" value="Submit" />
             </form>
 
 
@@ -90,6 +97,27 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         function logout() {
           // Perform logout action
           window.location.href = "../index.php"; // Redirect to logout script
+        }
+
+        function updateStatus(selectElement, complaintId) {
+          var status = selectElement.value;
+
+          // Create AJAX request
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200) {
+                // Request successful
+                alert('Status updated successfully.');
+              } else {
+                // Request failed
+                alert('Failed to update status.');
+              }
+            }
+          };
+          xhr.open('POST', 'update_status.php', true);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.send('status=' + status + '&id=' + complaintId);
         }
       </script>
     </body>

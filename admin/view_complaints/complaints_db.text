@@ -1,0 +1,6 @@
+
+
+
+//updated db for complaints status
+ALTER TABLE complaints
+ADD COLUMN status VARCHAR(20) DEFAULT 'unread' NOT NULL;
