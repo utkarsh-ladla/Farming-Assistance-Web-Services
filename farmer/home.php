@@ -55,8 +55,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link rounded-5" id="profile-tab4" data-bs-toggle="tab" data-bs-target="#advertisement" type="button" role="tab" aria-selected="false">
+          <button class="nav-link rounded-5" id="profile-tab4" data-bs-toggle="tab" data-bs-target="#upload-form" type="button" role="tab" aria-selected="false">
             Crop Advertisement Details
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#Sell_crop" type="button" role="tab" aria-selected="false">
+            Sell Crop
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -64,9 +69,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             Logout
           </button>
         </li>
-        <!-- <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-selected="false"></button>
-  </li> -->
       </ul>
 
       <div class="container">
@@ -92,7 +94,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <div class="tab-pane fade" id="Complaint-status" role="tabpane2">
             <!-- Content for the Home tab goes here -->
             <h1>view Complaint Status</h1>
-
+            <?php
+            include('view_complaint/view_Complaint_status.php');
+            ?>
           </div>
 
 
@@ -107,38 +111,81 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           </div>
 
 
-          <div class="tab-pane fade" id="advertisement" role="tabpane2">
+          <div class="tab-pane fade" id="upload-form" role="tabpane2">
             <!-- Content for the Home tab goes here -->
-            <h1>view Complaint Status</h1>
+
+            <h2>Advertisements</h2>
+            <?php include('../supplier/post_advertisements/accept_advertisement.php'); ?>
 
           </div>
 
-          <div class="tab-pane fade" id="Logout" role="tabpanel">
-            <!-- Content for the Contact tab goes here -->
-          </div>
+          <!-- sell crop  -->
+          <div class="tab-pane fade" id="Sell_crop" role="tabpane2">
+            
+           <div class="sell-crop-container">
+              <div class="sell-crop-container">
+                <h1>sell crop</h1>
+                <form action="sell_crop/sell_crop.php" method="POST">
+                  <label for="supplier_id">Supplier ID:</label>
+                  <input type="text" id="supplier_id" name="supplier_id" required><br><br>
+<!-- 
+                  <label for="supplier_name">Supplier Name:</label>
+                  <input type="text" id="supplier_name" name="supplier_name" ><br><br> -->
+
+                  <label for="crop_id">Crop ID:</label>
+                  <input type="number" id="crop_id" name="crop_id" required><br><br>
+
+                  <label for="crop_names">Crop Name:</label>
+                  <input type="text" id="crop_names" name="crop_name" required><br><br>
+
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" name="quantity" required><br><br>
+
+                  <label for="price">Price (in Rupees):</label>
+                  <input type="number" id="price" name="price" required><br><br>
+
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+
+
+
+          <!-- <form action="sell_crop.php" method="POST">
+                <label for="supplier_id">Supplier ID:</label>
+                <input type="text" id="supplier_id" name="supplier_id" required><br><br>
+
+                <label for="supplier_name">Supplier Name:</label>
+                <input type="text" id="supplier_name" name="supplier_name" readonly><br><br>
+
+                <label for="crop_id">Crop ID:</label>
+                <input type="text" id="crop_id" name="crop_id" required><br><br>
+
+                <label for="crop_names">Crop Name:</label>
+                <input type="text" id="crop_names" name="crop_name" required><br><br>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+
+                <label for="price">Price (in Rupees):</label>
+                <input type="number" id="price" name="price" required><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div> -->
+        </div>
+
+        <div class="tab-pane fade" id="Logout" role="tabpanel">
+          <!-- Content for the Contact tab goes here -->
         </div>
       </div>
-
+      </div>
+    
 
       <script>
         function logout() {
           // Perform logout action
           window.location.href = "../../index.php"; // Redirect to logout script
         }
-        /* fetch('farmer_tips/view_messages.php') // Change to the correct URL of your PHP file
-    .then(response => response.json())
-    .then(tips => {
-        const farmingTipsContainer = document.getElementById('farming-tips-container');
-        farmingTipsContainer.innerHTML = ''; // Clear existing content
-
-        tips.forEach(tip => {
-            const tipElement = document.createElement('div');
-            tipElement.textContent = tip;
-            farmingTipsContainer.appendChild(tipElement);
-        });
-    })
-    .catch(error => console.error('Error fetching farming tips:', error));
-*/
       </script>
     </body>
 
@@ -149,4 +196,5 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
   header("Location: index.php");
   exit();
 }
+
 ?>

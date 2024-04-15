@@ -29,7 +29,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 
       <header class="header">
-        <img src="lo.jpg" alt="Logo" class="logo" />
+        <!-- <img src="lo.jpg" alt="Logo" class="logo" /> -->
+        <h1>Next farm<span>.</span></h1>
         <h1>ADMIN PORTAL </h1><?php echo $_SESSION['name']; ?>
       </header>
 
@@ -68,22 +69,22 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <?php
             // Include view_messages.php to fetch farming tips
             include('view_complaints/view_complaints.php');
+
             ?>
-           
-
-
 
           </div>
           <div class="tab-pane fade" id="Farming-Tips" role="tabpanel">
             <!-- Content for the tips tab goes here -->
-            <form action="farmin_Tips/submit_message.php" method="post">
-              <label for="tip_content">Tip:</label><br />
-              <input type="text" id="tip_content" name="tip_content" required /><br /><br />
-              <input type="submit" value="Submit" />
-            </form>
-
-
+            <div class="form-container">
+              <form action="farmin_Tips/submit_message.php" method="post" class="farming-tips-form">
+                <label for="tip_content">Tip:</label><br />
+                <input type="text" id="tip_content" name="tip_content" required /><br /><br />
+                <input type="submit" value="Submit" class="submit-button" />
+              </form>
+            </div>
           </div>
+
+
 
 
           <div class="tab-pane fade" id="Logout" role="tabpanel">
@@ -97,27 +98,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         function logout() {
           // Perform logout action
           window.location.href = "../index.php"; // Redirect to logout script
-        }
-
-        function updateStatus(selectElement, complaintId) {
-          var status = selectElement.value;
-
-          // Create AJAX request
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-              if (xhr.status === 200) {
-                // Request successful
-                alert('Status updated successfully.');
-              } else {
-                // Request failed
-                alert('Failed to update status.');
-              }
-            }
-          };
-          xhr.open('POST', 'update_status.php', true);
-          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-          xhr.send('status=' + status + '&id=' + complaintId);
         }
       </script>
     </body>

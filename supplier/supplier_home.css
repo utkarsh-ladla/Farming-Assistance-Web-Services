@@ -1,72 +1,175 @@
-/* Reset some default styling */
 body, ul {
-    margin: 0;
-    padding: 0;
-    
-    
-  }
-  body{
-  background-image: url(../images/backgroundPortal.jpg);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 0;
+  padding: 0;
   
-  }
-  .sections {
-    display: none;
-  }
-  .sections:target {
-    display: block;
-  }
+  
+}
+body{
+background-image: url(../images/backgroundPortal.jpg);
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 
-  
-  body 
-  /* Style header */
-  .header {
-    background-color: #92b372; /* Green background */
-    color: white; /* White text */
-    padding: 20px;
+}
+.sections {
+  display: none;
+}
+.sections:target {
+  display: block;
+}
 
-  }
 
-  .nav{
-    background-color: rgb(86, 92, 86);
-    align-items: center;
-    margin-top: 10px;
-    margin-right: 75px;
-  }
+body 
+/* Style header */
+.header {
+  background-color: #92b372; /* Green background */
+  color: white; /* White text */
+  padding: 20px;
+
+}
+
+span{
+  color: red;
+}
+/* 
+.nav {
+  background-color: rgb(86, 92, 86);
+  display: flex;
+  justify-content: center; /* Center align the navigation bar */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+/* } */
+.nav{
+  background-color: rgb(86, 92, 86);
+  /* position: relative; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 10px;
+  margin-left: 75px;
+  margin-right: 75px;
+  /* margin-left: 200px; */
+  /* margin-right: 75px; */
+}
+ */
+.logo {
+  height: 250px;
+  float: left; /*Align logo to the left*/
+  margin-right: 20px; /*Add some spacing between logo and title*/
+}
+
+
+/* Style navigation bar */
+.navbar ul {
+ 
+  list-style-type: none; /* Remove bullet points */
+}
+
+.navbar li {
   
-  .logo {
-    height: 250px;
-    float: left; /* Align logo to the left */
-    margin-right: 20px; /* Add some spacing between logo and title */
-  }
-  
-  /* Style navigation bar */
-  .navbar ul {
-    list-style-type: none; /* Remove bullet points */
-  }
-  
-  .navbar li {
-    display: inline-block; /* Display navigation items horizontally */
-    margin-right: 20px; /* Add spacing between navigation items */
-  }
-  
-  /* Style complaint form */
-  /* .complaint-form {
-    margin-top: 20px;
-  }
-  
-  .complaint-form label,
-  .complaint-form textarea,
-  .complaint-form button {
-    display: block;
-    margin-bottom: 10px;
-  } */
-  
-  /* Style image (if applicable) */
-  /* .main-content img {
-    max-width: 100%;
-    height: auto;
-  } */
+  display: inline-block; /* Display navigation items horizontally */
+  margin-right: 200px; /* Add spacing between navigation items */
+}
+
+/* submit complaints */
+.tab-pane {
+  padding: 20px;
+}
+
+/* post advertisement */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="number"],
+input[type="submit"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* crop received */
+#crop-received {
+  /* Add your specific styles here */
+}
+
+#crop-received h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#crop-received table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#crop-received table, #crop-received th, #crop-received td {
+  border: 1px solid #ddd;
+}
+
+#crop-received th, #crop-received td {
+  padding: 10px;
+  text-align: left;
+}
+
+#crop-received th {
+  background-color: #f2f2f2;
+}
+
+#crop-received tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#crop-received tr:hover {
+  background-color: #f2f2f2;
+}
+
+#crop-received button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}

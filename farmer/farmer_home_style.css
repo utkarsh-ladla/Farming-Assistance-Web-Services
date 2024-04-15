@@ -169,3 +169,155 @@ body, ul {
   font-size: 18px; /* Increased font size */
 }
 
+
+/* view complaint status */
+
+#Complaint-status {
+  width: 100%;
+  /* max-width: 800px; */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.no-complaints {
+  font-style: italic;
+  color: #666;
+}
+
+/* crop advertisement  */
+
+#upload-form {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#upload-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#crop_name,
+#required_quantity,
+#crop_image,
+#submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+#submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #45a049;
+}
+.advertisement-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advertisement {
+  width: 300px; /* Adjust the width as needed */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.advertisement img {
+  width: 100%;
+  height: auto;
+}
+
+.accept-btn {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.accept-btn:hover {
+  background-color: #0056b3;
+}
+
+/* sell crop  */
+.sell-crop-container {
+  width: 50%;
+  /* max-width: 400px; */
+  margin: 10px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sell-crop-container h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.sell-crop-container select,
+.sell-crop-container input[type="text"],
+.sell-crop-container input[type="number"] {
+  width: 50%;
+  /* padding: 8px; */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  /* margin-bottom: 10px; */
+  /* box-sizing: border-box; */
+}
+
+.sell-crop-container button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.sell-crop-container button:hover {
+  background-color: #0056b3;
+}
+
